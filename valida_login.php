@@ -1,5 +1,11 @@
 <?php 
 
+session_start();
+
+$_SESSION['x'] = 'oi, sou um valor de sessão!';
+
+$_SESSION['y'] = 1500;
+
 // Usuários do sistema
 $usuario_autenticado = false;
 
@@ -29,8 +35,11 @@ foreach($usuarios_app as $user) {
 }
 // header - função nativa do php para forçar redirecionamento.
 if($usuario_autenticado) {
+    // echo 'Usuário auenticado.';
+    $_SESSION['autenticado'] = 'SIM';
     header('Location: home.php');
 }else {
+    $_SESSION['autenticado'] = 'NAO';
     header('Location: index.php?login=erro');
 }
 
