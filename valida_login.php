@@ -35,7 +35,6 @@ foreach($usuarios_app as $user) {
 }
 // header - função nativa do php para forçar redirecionamento.
 if($usuario_autenticado) {
-    // echo 'Usuário auenticado.';
     $_SESSION['autenticado'] = 'SIM';
     header('Location: home.php');
 }else {
