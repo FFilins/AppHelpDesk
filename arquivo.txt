@@ -1,2 +1,2 @@
-Notebook não liga#Hardware#lorem
-Ipad com display queimado#Hardware#bla bla bla
+3#Notebook não liga#Hardware#teste teste teste
+2#Erro de impressão#Impressora#bla bla bla bla bla

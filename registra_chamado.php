@@ -1,14 +1,12 @@
 <?php 
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
+session_start();
 
 // montando o texto
 $titulo = str_replace('#', '-', $_POST['titulo']);
 $categoria = str_replace('#', '-', $_POST['categoria']);
 $descricao = str_replace('#', '-', $_POST['descricao']);
 //                                                                             PHP End Of Line
-$texto = $_POST['titulo'] . '#' . $_POST['categoria'] . '#'  . $_POST['descricao'] . PHP_EOL;
+$texto = $_SESSION['id'] . '#' . $_POST['titulo'] . '#' . $_POST['categoria'] . '#'  . $_POST['descricao'] . PHP_EOL;
 
 // abrindo, escrevendo e fechando o arquivo
 $arquivo = fopen('arquivo.txt', 'a');
